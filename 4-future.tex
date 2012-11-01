@@ -1,0 +1,41 @@
+\section{Current and Future Research}
+
+We discussed and explored the design of the \emph{Beat the Machine} process for directly integrating humans into testing automatic decision models for vulnerabilities. Our results suggest that BTM is especially good in identifying cases where the model fails, while being confident that it is correct.  It is naturally interesting to examine how to best use knowledge of such vulnerabilities to improve the automatic decisions models. 
+
+
+Vulnerability testing is common in areas of computer security, where ``white hat'' hackers with the appropriate expertise try to expose vulnerabilities in the security infrastructure of a firm. In our setting, we see that even lay users can easily find unknown holes in automatic decision models that test very well in ``standard'' tests, and show high classification performance when measured with the traditional, usual metrics (accuracy, AUC, etc).  Thus, builders of automatic decision models should take extra care when using these
+traditional metrics for evaluations.
+
+In our live deployment, untrained humans, with the appropriate incentives, were able to ``beat the machine'' seemingly easily, and discover a large number of vulnerabilities. This is, of course, useful by itself: the ``unknown unknowns'' become ``known unknowns'' and we can prepare to deal with these cases. But the key question for future research is also: how can we best incorporate such knowledge so that both ``unknown unknowns'' and ``known unknowns'' become ``known knowns.''
+
+\section*{Acknowledgements}
+
+The authors thank George A. Kellner and NEC for faculty fellowships,
+and AdSafe Media for expertise, support, and data.  The models used in
+this paper are not necessarily models used in production by any
+company. This work was partially supported by the National Science 
+Foundation under Grant No. IIS–0643846.
+
+
+% [Add ambiguity in target variable to Limitations]
+
+% ***To add to current/future work below:
+
+%- How can we actually improve models with these unknown unknown cases?
+%  Just plunking them into a training set yields mixed results.  This
+%  may be because the training gets skewed, and we need to have a
+%  specially designed training system.  Or it may be because we do not
+%  really know how to evaluate the ``improved'' system.  What should be
+%  the composition of the test set exactly?
+
+%- In KDD-2010 we introduced guided learning, and showed that it can be
+%  very useful for quickly building models in domains such as this.  We
+%  are in the process of performing a similar comparison of BTM to GL.
+%  Notably, GL also is not focused at all on the hard-to-envision
+%  cases; in contrast, the incentive system there is to give easy to
+%  find cases.
+
+% For discussion:
+
+% - relate to scenario planning
+% - relate to white-hat hackers
