@@ -1,11 +1,6 @@
-
-
 \section{Introduction}
+\label{sec:intro}
 
-\quote{\em ``There are known knowns. These are things we know that we know. There are known unknowns. That is to say, there are things that we know we don't know. But there are also unknown unknowns. There are things we don't know we don't know.''\\
--- \textbf{Donald Rumsfeld}}
-
-~
 
 Many businesses and government organizations make decisions based on
 estimations made by explicit or implicit models of the world.  Being
@@ -23,6 +18,28 @@ catastrophes, from terrorist attacks to unexpected nuclear disasters,
 in mid-range failures, like cybersecurity breaches, and in failures of
 operational models, such as predictive models for credit scoring,
 fraud detection, document classification, etc.
+
+Unknown unknowns are related to the classic contrast between reasoning
+systems that make open- and closed-world
+assumptions~\cite{Reiter77closedworld}: are the only answers to a query Q those
+that are actually in the database?  In the context of predictive
+modeling, in applications with limited labeled training data, small
+disjuncts\cite{weiss10disjunct}, and possibly unknown selection biases, are
+we willing to make the assumption that regularities that have no or
+insufficient representation in the training data essentially do not
+exist?
+
+% In the context of data mining, one can
+% think of learning methods as implicitly or explicitly making a
+% closed-world assumption: 
+% Whether
+% learning systems truly make a closed-world assumption may be debatable
+% under strict assumptions of learning theory and decision theory, where
+% training data are sampled from the same population to which the model
+% will be applied, and we know the costs of making errors.  However, in
+% the real world we often learn and apply models anyway in the face of
+% various sampling biases, often that we do not even know about.  Furthermore, 
+% as we will describe, we often have 
 
 In this paper we introduce and analyze a crowdsourcing system designed
 to help uncover the ``unknown unknowns'' for predictive models.  The
@@ -125,7 +142,8 @@ machine learning~\cite{winston1970learning} and for human
 learning~\cite{vanlehn1998analogy}.
 
 Unfortunately, although helpful in understanding and improving
-modeling, these strategies look exactly where we don't want to look.
+modeling, for finding unknown unknowns, 
+these strategies look exactly where we don't want to look.
 These strategies explicitly deal with the ``known unknowns.''  The
 model is uncertain about these examples---we ``know'' that we don't
 know the answer for them (i.e., we have low confidence in the model's
@@ -135,13 +153,17 @@ certain about, thereby \textit{reducing} the chance that we are going
 to find the unknown unknowns.
 
 With that substantial preamble, we can now state succinctly the goal
-and contributions of this paper.  We introduce a technique and system
-to use human workers to help find the \emph{unknown unknowns}.  Our
-BeatTheMachine (BTM) system combines a game-like setup with
-incentives designed to elicit cases where the model is confident and
-wrong.  Specifically, BTM rewards workers that discover cases that
-cause the system to fail. The reward increases with the magnitude of
-the failure. This setting makes the system to behave like a game,
+and contributions of this paper.  First, we describe the problem more
+formally, including relationships to prior work.  We next discuss
+changes to how we need to view the evaluation of classifiers, if we
+want to move from a closed-world view of a predictive modeling problem
+to an open-world view.  Then we introduce a technique and system to use
+human workers to help find the \emph{unknown unknowns}.  Our
+BeatTheMachine (BTM) system combines a game-like setup with incentives
+designed to elicit cases where the model is confident and wrong.
+Specifically, BTM rewards workers that discover cases that cause the
+system to fail. The reward increases with the magnitude of the
+failure. This setting makes the system to behave like a game,
 encouraging steady, accurate participation in the tasks. We describe
 our first experiences by the live deployment of this system, in a
 setting for identifying web pages with offensive content on the
@@ -149,11 +171,12 @@ Internet. We show that this BTM setting discovers cases that are
 inherently different than the errors identified by a random sampling
 process. In fact, the two types of errors are very different. The BTM
 process identifies ``big misses'' and potential catastrophic failures,
-while traditional model-based example selection identifies ``near misses'' that are more
-appropriate for fine-tuning the system.  The evidence shows that BTM
-does not just find individual ``oddball'' outlier cases, but it finds
-systematic big errors.  In a sense, the BTM process indeed gives us
-the opportunity to learn our ``unknown unknowns'' and warn us about
-the failures that our current automatic model cannot (yet) identify by itself.
+while traditional model-based example selection identifies ``near
+misses'' that are more appropriate for fine-tuning the system.  The
+evidence shows that BTM does not just find individual ``oddball''
+outlier cases, but it finds systematic big errors.  In a sense, the
+BTM process indeed gives us the opportunity to learn our ``unknown
+unknowns'' and warn us about the failures that our current automatic
+model cannot (yet) identify by itself.
 
 
