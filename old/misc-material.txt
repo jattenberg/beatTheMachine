@@ -1,0 +1,131 @@
+\section{Todos}
+\josh{listing here what i believe should be done}
+\begin{itemize}
+\item {\bf beat the machine} this requires a treatment of guided learning, i believe. I think beat the machine can be left fairly general--- including any system that rewards are proportional to some objective based on the model's feedback, the true class label, and possibly other criteria of the example. 
+\item {\bf an example implementation} presenting an example implementation where rewards are proportional to the error rate. ``true'' beat the machine. present experimental results on genuine data.
+\item {\bf reliable data} i'm not sure how to do this one. how do we empirically show that BTM gives us good data? 
+
+\end{itemize}
+
+\drop{
+\section{Foster's Email}
+I think an even better idea might be to start with the question
+generally of how we'd like to set up a BTM version of guided learning.
+
+- Guides either may or may not have access to the machine.  I don't
+think it matters for what follows.  There may be a more elaborate
+version that does.
+
+- Guides provide cases that they think beat the Machine.  That gives
+them a label.
+- The Machine labels the case.  If the Guide's label doesn't actually
+disagree, then take the doesn't-disagree action and stop
+- Otherwise, the labels do disagree
+
+- Start the verification process.  This has two goals: (i) to pay the
+Guide if appropriate, and (ii) to prepare the example as training
+data, if appropriate.
+
+How to do verification?
+
+Get additional labels on the data point until we are certain about the
+label.  How to do that?  Follow the same methodology as for NLU in the
+repeated labeling technical report (2010).
+http://archive.nyu.edu/handle/2451/29799
+
+Note that this is *not* really applying the repeated labeling
+procedure here, since we're not deciding on which example to label.
+We just draw on the same theory base.
+
+I think this may have various interesting twists.  See below.  The
+main idea is that this might give a nice basis for presenting the
+ideas, so it doesn't just seem like systems stuff--all the twists
+below are (I think) directions in which the math could be taken.  We
+can choose some and say that others also could be taken (or discuss
+them in a limitations section).
+
+F
+
+Do we assume that one of the classes is actually correct?
+
+That the labelers have some fixed error rate?  Is it known? (The NLU
+technique assumes fixed but unknown, although the extension to
+variable may be straightforward.)
+
+If not fixed, do we assume a prior distribution over labeler quality?
+Do we model their quality and correct, D and S-style?  Do we drop poor
+labelers?  Etc.
+
+Do we include the model in with the labelers?  I'm actually not sure
+there.  Why not just look for disagreement to start, and then use
+labelers completely.
+
+Do we include the Guide as a labeler?  Again, I'm not sure there.
+Maybe it's better to get a completely objective set of labels for the
+purpose of deciding the true label (cost concerns aside).
+
+At what certainty level are we willing to pay?
+
+How much do we save by doing this over getting some fixed number of
+labelers on each example?
+
+Do we abort at some point because there is too much confusion?  If so,
+what do we do about paying/training?
+
+When it's time for training, how exactly do we do it?  (I have results
+with Shengli suggesting how; a separate topic.)
+}
+
+
+
+\josh{say something like:}
+In this section we illustrate the details of our proposed technique for encouraging users to expose useful training instances. However, in order to offer a complete treatment, we must begin by presenting some background work. 
+
+\section{Guided Learning}
+\label{sec:gudied}
+Guided Learning is an alternative technique for utilizing human resources for model development, beyond traditional (active) instance labeling. Here, humans are tasked with \textit{seeking} examples satisfying some criteria.  For this paper, the basic guided learning task is straightforward: find examples representing the different classes in some proportion, $\rho$. These instances are provided as input to classifier induction~\cite{attprov:kdd2010}. 
+
+% Humans, using tools such as web search engines combined with their own
+% background knowledge on the criteria defining the task, can often find
+% positive examples with efficiency exceeding a 
+% model-based active learner. 
+% This is particularly true in the early
+% stages of active learning where the model does not have a refined
+% knowledge of the input space.
+
+Guided learning is motivated by the results of Weiss \& Provost \cite{WeissProvost2001,WeissProvost2003}, who address the question ``if only $n$ training examples are to be selected, in what proportion should the classes be represented?''  Their results show that the best proportion varies across domains; however, if one wants to maximize the ranking of cases (i.e., the AUC) a proportion of $\rho = 0.5$ is a very good choice.  In principle the problem of this paper is different: how to use human resources to \textit{search} for valid examples using all tools available to them---including both active learning and guided learning.  Nevertheless, this paper's analysis could be seen as a follow-on to this prior work; in our experimental setting we simulate guided learning by class-conditional random sampling.  We describe the simulation 
+below. 
+
+More specifically, a thorough evaluation of a guided learning system in the wild would require a sizable labeled pool of instances, in effect defeating the cost savings of the techniques proposed here. In order to compare
+and contrast different techniques, all guided learning experiments presented here are performed in the following way: given an initial pool of labeled instances $P$ with some subset of minority and majority instances, $P_+$ and $P_-$ respectively, along with a selection ratio, $\rho$, at each batch, the guided learning simulator selects $\rho|b|$ instances from the $P_+$ uniformly at random and $(1-\rho)|b|$ instances uniformly at random from $P_-$, where $|b|$ is the size of the batch selected at each selection epoch. This process proceeds until either pool is exhausted, at which point the process switches over to purely random sampling from the other class. This simulation is similar to the procedure of Weiss \& Provost who assume that examples can be produced randomly by class.
+
+
+\section{Beat The Machine}
+
+Beat the Machine is an extension to simple guided learning incorporating economic incentives to gather useful examples through a game-like interaction where users are challenged to perform specific tasks interacting with a machine-learned model. Like guided learning, at each epoch, users are tasked with selecting $P_+$ majority and $P_-$ minority examples according to some proportion, $\rho$. However, rather than simply providing users with a flat fee in exchange for any examples meeting these class criteria, rewards vary according to an objective conditioned on the model's predicted class label. The title ``Beat the Machine'' stems from the family of objectives used throughout this work--- namely users are paid only for examples satisfying both the class ratio requirements that the current model misclassifies. Payment then varies according to the level of disagreement between the true class label of an example and the model's disagreement. 
+
+In particular, consider a system where users are rewarded in proportion directly with the level of disagreement with the base model--- the more incorrect the model's predicted label on a submitted example, the more the submitter gets paid. That is, in the binary case, given a model capable of performing probability estimates,\footnote{note that any model class not natively capable of such estimation can be transformed into a probabilistic system using a system such as MetaCost~\cite{domingos1999metacost}} the reward given to a user for a class-specific instance, $x$ is denoted by an increasing function in the operand, $R(|y-f(x)|)$, where $y = \{0,1\}$ and $f(x) = \hat{p}(y=1 | x)$, the model's predicted probability of membership in the positive class given $x$. The challenge for the user then becomes not only to find those examples that satisfy the desired class ratio, $\rho$, but to try an ``beat the machine'' as badly as possible. 
+
+\josh{discuss motivation for this}
+
+
+\drop{
+In order to run many experiments comparing Beat The Machine to other data acquisition strategies, it is necessary to create a reliable simulator. BTM is simulated as follows: assume a desired class ratio, $\rho$ and a desired batch size, $N$. The current pool of unlabeled examples is labeled by the current model. The misclassified examples are put into two candidate sets based on their true label, $c_+$ and $c_-$.  We then sample $\rho N$ examples from $c_+$ and $(1-\rho)N$ examples from $c_-$. The sampling is based on the distance from the classification boundary, examples closer to the boundary are more likely to be sampled. This is done by ranking the examples by this distance, and building a sampling distribution over the rank.
+}
+
+\begin{figure*}[h!t]
+\center{\includegraphics[width=185mm]{plots/rottentomatoes_varyskew_20101216.png}}
+\vspace{-0.35in}
+\caption{Comparison of  uncertainty sampling, guided learning and beat the machine on a movie review sentiment classification data set with varying base rates}
+\label{fig:mp_rottten}
+\vspace{-0.2in}
+\end{figure*}
+
+
+\begin{figure*}[h!t]
+\center{\includegraphics[width=185mm]{plots/sports_varyskew_20101216.png}}
+\vspace{-0.35in}
+\caption{Comparison of  uncertainty sampling, guided learning and beat the machine on a text categorization data set with varying base rates}
+\label{fig:mp_sports}
+\vspace{-0.2in}
+\end{figure*}

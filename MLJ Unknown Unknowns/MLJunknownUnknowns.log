@@ -1,0 +1,592 @@
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.9.17)  15 NOV 2012 00:31
+entering extended mode
+**MLJUnknownUnknowns.tex
+("C:\Dropbox\Working\MLJ Unknown Unknowns\MLJUnknownUnknowns.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2009-06-19, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, lao, latin, lat
+vian, lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerm
+an, ngerman-x-2009-06-19, nynorsk, oriya, panjabi, pinyin, polish, portuguese, 
+romanian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swis
+sgerman, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, u
+senglishmax, welsh, loaded.
+("C:\Dropbox\Working\MLJ Unknown Unknowns\svjour3.cls"
+Document Class: svjour3 2007/05/08 v3.2 
+LaTeX document class for Springer journals
+Class Springer-SVJour3 Info: extra/valid Springer sub-package (-> *.clo) 
+(Springer-SVJour3)           not found in option list of \documentclass
+(Springer-SVJour3)           - autoactivating "global" style.
+("C:\Dropbox\Working\MLJ Unknown Unknowns\svglov3.clo"
+File: svglov3.clo 2009/12/18 v3.2 style option for standardised journals
+
+SVJour Class option: svglov3.clo for standardised journals
+)
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 149.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 150.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 151.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 152.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 153.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 154.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 155.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 156.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 157.
+\logodepth=\dimen102
+\headerboxheight=\dimen103
+\betweenumberspace=\dimen104
+\aftertext=\dimen105
+\headlineindent=\dimen106
+\c@inst=\count79
+\c@auth=\count80
+\instindent=\dimen107
+\authrun=\box26
+\authorrunning=\toks14
+\titrun=\box27
+\titlerunning=\toks15
+\combirun=\box28
+\c@lastpage=\count81
+\rubricwidth=\dimen108
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\spthmsep=\dimen109
+\c@theorem=\count87
+\c@case=\count88
+\c@conjecture=\count89
+\c@corollary=\count90
+\c@definition=\count91
+\c@example=\count92
+\c@exercise=\count93
+\c@lemma=\count94
+\c@note=\count95
+\c@problem=\count96
+\c@property=\count97
+\c@proposition=\count98
+\c@question=\count99
+\c@solution=\count100
+\c@remark=\count101
+\c@figure=\count102
+\c@table=\count103
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\figcapgap=\dimen110
+\tabcapgap=\dimen111
+\figgap=\dimen112
+\bibindent=\dimen113
+\@tempcntc=\count104
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count105
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+\Gin@req@height=\dimen114
+\Gin@req@width=\dimen115
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsmath.sty"
+Package: amsmath 2000/07/18 v2.13 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks17
+\ex@=\dimen116
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen117
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ams\math\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count106
+LaTeX Info: Redefining \frac on input line 211.
+\uproot@=\count107
+\leftroot@=\count108
+LaTeX Info: Redefining \overline on input line 307.
+\classnum@=\count109
+\DOTSCASE@=\count110
+LaTeX Info: Redefining \ldots on input line 379.
+LaTeX Info: Redefining \dots on input line 382.
+LaTeX Info: Redefining \cdots on input line 467.
+\Mathstrutbox@=\box29
+\strutbox@=\box30
+\big@size=\dimen118
+LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+
+
+Package amsmath Warning: Unable to redefine math accent \vec.
+
+\macc@depth=\count111
+\c@MaxMatrixCols=\count112
+\dotsspace@=\muskip11
+\c@parentequation=\count113
+\dspbrk@lvl=\count114
+\tag@help=\toks18
+\row@=\count115
+\column@=\count116
+\maxfields@=\count117
+\andhelp@=\toks19
+\eqnshift@=\dimen119
+\alignsep@=\dimen120
+\tagshift@=\dimen121
+\tagwidth@=\dimen122
+\totwidth@=\dimen123
+\lineht@=\dimen124
+\@envbody=\toks20
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2666.
+LaTeX Info: Redefining \] on input line 2667.
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2009/06/22 v3.00
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+))
+("C:\Users\Panos Ipeirotis\AppData\Roaming\MiKTeX\2.9\tex\latex\subfigure\subfi
+gure.sty"
+Package: subfigure 2002/07/30 v2.1.4 subfigure package
+\subfigtopskip=\skip46
+\subfigcapskip=\skip47
+\subfigcaptopadj=\dimen125
+\subfigbottomskip=\skip48
+\subfigcapmargin=\dimen126
+\subfiglabelskip=\skip49
+\c@subfigure=\count118
+\c@lofdepth=\count119
+\c@subtable=\count120
+\c@lotdepth=\count121
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+
+("C:\Users\Panos Ipeirotis\AppData\Roaming\MiKTeX\2.9\tex\latex\subfigure\subfi
+gure.cfg")
+\subfig@top=\skip50
+\subfig@bottom=\skip51
+)
+("C:\Users\Panos Ipeirotis\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\micro
+type.sty"
+Package: microtype 2010/01/10 v2.4 Micro-typography with pdfTeX (RS)
+\MT@toks=\toks22
+\MT@count=\count122
+LaTeX Info: Redefining \lsstyle on input line 1597.
+LaTeX Info: Redefining \lslig on input line 1597.
+\MT@outer@space=\skip52
+LaTeX Info: Redefining \textls on input line 1605.
+\MT@outer@kern=\dimen127
+LaTeX Info: Redefining \textmicrotypecontext on input line 2156.
+Package microtype Info: Loading configuration file microtype.cfg.
+
+("C:\Users\Panos Ipeirotis\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\micro
+type.cfg"
+File: microtype.cfg 2010/01/10 v2.4 microtype main configuration file (RS)
+)) ("C:\Dropbox\Working\MLJ Unknown Unknowns\MLJUnknownUnknowns.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+
+Unknown journal: specify \journalname{<name of your journal>} in preambel
+
+
+("C:\Users\Panos Ipeirotis\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf
+.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count123
+\scratchdimen=\dimen128
+\scratchbox=\box31
+\nofMPsegments=\count124
+\nofMParguments=\count125
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count126
+\MPscratchDim=\dimen129
+\MPnumerator=\count127
+\makeMPintoPDFobject=\count128
+\everyMPtoPDFconversion=\toks24
+)
+LaTeX Info: Redefining \microtypecontext on input line 26.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+Package microtype Info: No tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+("C:\Users\Panos Ipeirotis\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-cm
+r.cfg"
+File: mt-cmr.cfg 2009/11/09 v2.0 microtype config. file: Computer Modern Roman 
+(RS)
+)
+SVJour3 warning: Missing \journalname
+SVJour3 warning: Missing \date
+SVJour3 warning: Missing \institute
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <9.5> not available
+(Font)              size <9> substituted on input line 75.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <13> not available
+(Font)              size <12> substituted on input line 75.
+
+LaTeX Font Info:    Calculating math sizes for size <9.5> on input line 75.
+
+LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <9.5> not available
+(Font)              size <9> substituted on input line 75.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <9.5> not available
+(Font)              size <9> substituted on input line 75.
+
+LaTeX Font Info:    Try loading font information for U+msa on input line 75.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+("C:\Users\Panos Ipeirotis\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-ms
+a.cfg"
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 75.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+)
+("C:\Users\Panos Ipeirotis\AppData\Roaming\MiKTeX\2.9\tex\latex\microtype\mt-ms
+b.cfg"
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <9.5> not available
+(Font)              size <9> substituted on input line 75.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <9.5> not available
+(Font)              size <9> substituted on input line 75.
+
+
+SVJour3 Warning: Title too long for running head.
+Please supply a shorter form with \titlerunning prior to \maketitle
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/it' in size <9.5> not available
+(Font)              size <9> substituted on input line 79.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/it' in size <9.5> not available
+(Font)              size <9> substituted on input line 84.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--85
+
+ []
+
+("C:\Dropbox\Working\MLJ Unknown Unknowns\1-introduction.tex" [1{C:/Users/Panos
+ Ipeirotis/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2])
+("C:\Dropbox\Working\MLJ Unknown Unknowns\2-background.tex" [3] [4])
+("C:\Dropbox\Working\MLJ Unknown Unknowns\3-unknowns.tex"
+
+LaTeX Warning: Citation ` Platt99probabilisticoutputs' on page 5 undefined on i
+nput line 11.
+
+<plots/Quadrant.png, id=23, 367.3725pt x 324.4923pt>
+File: plots/Quadrant.png Graphic file (type png)
+ <use plots/Quadrant.png>
+Package pdftex.def Info: plots/Quadrant.png used on input line 18.
+(pdftex.def)             Requested size: 173.5pt x 153.24915pt.
+
+[5] [6 <C:/Dropbox/Working/MLJ Unknown Unknowns/plots/Quadrant.png>]
+
+LaTeX Warning: Citation ` attprov:kdd2010' on page 7 undefined on input line 42
+.
+
+<plots/example_function_2.png, id=36, 531.1845pt x 533.3526pt>
+File: plots/example_function_2.png Graphic file (type png)
+
+<use plots/example_function_2.png>
+Package pdftex.def Info: plots/example_function_2.png used on input line 66.
+(pdftex.def)             Requested size: 208.20212pt x 209.04837pt.
+)
+("C:\Dropbox\Working\MLJ Unknown Unknowns\4-measuring.tex" [7] [8 <C:/Dropbox/W
+orking/MLJ Unknown Unknowns/plots/example_function_2.png>] [9]
+<plots/decreasing_UU-KU_150_3knn.png, id=51, 578.16pt x 433.62pt>
+File: plots/decreasing_UU-KU_150_3knn.png Graphic file (type png)
+
+<use plots/decreasing_UU-KU_150_3knn.png>
+Package pdftex.def Info: plots/decreasing_UU-KU_150_3knn.png used on input line
+ 66.
+(pdftex.def)             Requested size: 138.79788pt x 104.09738pt.
+
+<plots/decreasing_UU-KU_300_3knn.png, id=52, 578.16pt x 433.62pt>
+File: plots/decreasing_UU-KU_300_3knn.png Graphic file (type png)
+
+<use plots/decreasing_UU-KU_300_3knn.png>
+Package pdftex.def Info: plots/decreasing_UU-KU_300_3knn.png used on input line
+ 72.
+(pdftex.def)             Requested size: 138.79788pt x 104.09738pt.
+
+<plots/decreasing_UU-KU_1500_3knn.png, id=53, 578.16pt x 433.62pt>
+File: plots/decreasing_UU-KU_1500_3knn.png Graphic file (type png)
+
+<use plots/decreasing_UU-KU_1500_3knn.png>
+Package pdftex.def Info: plots/decreasing_UU-KU_1500_3knn.png used on input lin
+e 76.
+(pdftex.def)             Requested size: 138.79788pt x 104.09738pt.
+
+<plots/decreasing_UU-KU_15000_3knn.png, id=54, 578.16pt x 433.62pt>
+File: plots/decreasing_UU-KU_15000_3knn.png Graphic file (type png)
+
+<use plots/decreasing_UU-KU_15000_3knn.png>
+Package pdftex.def Info: plots/decreasing_UU-KU_15000_3knn.png used on input li
+ne 80.
+(pdftex.def)             Requested size: 138.79788pt x 104.09738pt.
+)
+("C:\Dropbox\Working\MLJ Unknown Unknowns\5-btm-design.tex" [10] [11 <C:/Dropbo
+x/Working/MLJ Unknown Unknowns/plots/decreasing_UU-KU_150_3knn.png> <C:/Dropbox
+/Working/MLJ Unknown Unknowns/plots/decreasing_UU-KU_300_3knn.png> <C:/Dropbox/
+Working/MLJ Unknown Unknowns/plots/decreasing_UU-KU_1500_3knn.png> <C:/Dropbox/
+Working/MLJ Unknown Unknowns/plots/decreasing_UU-KU_15000_3knn.png>] [12]
+<plots/btm-HIT.png, id=69, 760.34062pt x 389.20406pt>
+File: plots/btm-HIT.png Graphic file (type png)
+ <use plots/btm-HIT.png>
+Package pdftex.def Info: plots/btm-HIT.png used on input line 29.
+(pdftex.def)             Requested size: 277.60106pt x 142.10284pt.
+)
+("C:\Dropbox\Working\MLJ Unknown Unknowns\6-results.tex"
+Underfull \vbox (badness 3118) has occurred while \output is active []
+
+ [13 <C:/Dropbox/Working/MLJ Unknown Unknowns/plots/btm-HIT.png>] [14]
+<plots/Hate-speech-scores.PNG, id=78, 577.40718pt x 420.06938pt>
+File: plots/Hate-speech-scores.PNG Graphic file (type png)
+
+<use plots/Hate-speech-scores.PNG>
+Package pdftex.def Info: plots/Hate-speech-scores.PNG used on input line 54.
+(pdftex.def)             Requested size: 138.79788pt x 100.97894pt.
+
+<plots/porn-scores.PNG, id=79, 582.67688pt x 420.06938pt>
+File: plots/porn-scores.PNG Graphic file (type png)
+
+<use plots/porn-scores.PNG>
+Package pdftex.def Info: plots/porn-scores.PNG used on input line 58.
+(pdftex.def)             Requested size: 138.79788pt x 100.06236pt.
+
+Underfull \vbox (badness 1082) has occurred while \output is active []
+
+ [15 <C:/Dropbox/Working/MLJ Unknown Unknowns/plots/Hate-speech-scores.PNG> <C:
+/Dropbox/Working/MLJ Unknown Unknowns/plots/porn-scores.PNG>]
+<plots/adt_btm_eval.png, id=85, 449.68pt x 337.26pt>
+File: plots/adt_btm_eval.png Graphic file (type png)
+
+<use plots/adt_btm_eval.png>
+Package pdftex.def Info: plots/adt_btm_eval.png used on input line 112.
+(pdftex.def)             Requested size: 208.20212pt x 156.15013pt.
+)
+("C:\Dropbox\Working\MLJ Unknown Unknowns\7-future.tex" [16 <C:/Dropbox/Working
+/MLJ Unknown Unknowns/plots/adt_btm_eval.png (PNG copy)>])
+("C:\Dropbox\Working\MLJ Unknown Unknowns\8-appendices.tex"
+<plots/reject_decision_bounds_fill.png, id=89, 411.136pt x 308.352pt>
+File: plots/reject_decision_bounds_fill.png Graphic file (type png)
+
+<use plots/reject_decision_bounds_fill.png>
+Package pdftex.def Info: plots/reject_decision_bounds_fill.png used on input li
+ne 16.
+(pdftex.def)             Requested size: 208.20212pt x 156.15175pt.
+
+<plots/cost_reject_decision_bounds_fill.png, id=90, 429.605pt x 563.706pt>
+File: plots/cost_reject_decision_bounds_fill.png Graphic file (type png)
+
+<use plots/cost_reject_decision_bounds_fill.png>
+Package pdftex.def Info: plots/cost_reject_decision_bounds_fill.png used on inp
+ut line 31.
+(pdftex.def)             Requested size: 208.20212pt x 273.19064pt.
+) [17] [18 <C:/Dropbox/Working/MLJ Unknown Unknowns/plots/reject_decision_bound
+s_fill.png> <C:/Dropbox/Working/MLJ Unknown Unknowns/plots/cost_reject_decision
+_bounds_fill.png>]
+("C:\Dropbox\Working\MLJ Unknown Unknowns\MLJUnknownUnknowns.bbl") [19]
+("C:\Dropbox\Working\MLJ Unknown Unknowns\MLJUnknownUnknowns.aux")
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.0pt have occurred.
+
+ )
+(\end occurred when \ifx on line 88 was incomplete)
+(\end occurred when \ifx on line 88 was incomplete)
+(\end occurred when \ifx on line 88 was incomplete)
+(\end occurred when \ifx on line 88 was incomplete)
+(\end occurred when \ifx on line 88 was incomplete)
+(\end occurred when \ifx on line 88 was incomplete)
+(\end occurred when \ifx on line 88 was incomplete)
+(\end occurred when \ifx on line 88 was incomplete)
+(\end occurred when \ifx on line 88 was incomplete)
+(\end occurred when \ifx on line 88 was incomplete)
+(\end occurred when \ifx on line 85 was incomplete)
+(\end occurred when \ifx on line 85 was incomplete)
+(\end occurred when \ifx on line 85 was incomplete)
+(\end occurred when \ifx on line 85 was incomplete)
+(\end occurred when \ifx on line 85 was incomplete)
+(\end occurred when \ifx on line 85 was incomplete)
+(\end occurred when \ifx on line 85 was incomplete)
+(\end occurred when \ifx on line 85 was incomplete)
+(\end occurred when \ifx on line 85 was incomplete)
+(\end occurred when \ifx on line 85 was incomplete)
+(\end occurred when \ifx on line 80 was incomplete)
+(\end occurred when \ifx on line 80 was incomplete)
+(\end occurred when \ifx on line 80 was incomplete)
+(\end occurred when \ifx on line 80 was incomplete)
+(\end occurred when \ifx on line 80 was incomplete)
+(\end occurred when \ifx on line 80 was incomplete)
+(\end occurred when \ifx on line 80 was incomplete)
+(\end occurred when \ifx on line 80 was incomplete)
+(\end occurred when \ifx on line 80 was incomplete)
+(\end occurred when \ifx on line 80 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 70 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete)
+(\end occurred when \ifx on line 63 was incomplete) 
+Here is how much of TeX's memory you used:
+ 4334 strings out of 494045
+ 62827 string characters out of 3145939
+ 151576 words of memory out of 3000000
+ 7423 multiletter control sequences out of 15000+200000
+ 19972 words of font info for 123 fonts, out of 3000000 for 9000
+ 715 hyphenation exceptions out of 8191
+ 32i,9n,35p,1561b,291s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cmextra/cmbsy9.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti8.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti9.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm
+10.pfb>
+Output written on MLJUnknownUnknowns.pdf (19 pages, 1147810 bytes).
+PDF statistics:
+ 177 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 13885 words of extra memory for PDF output out of 14400 (max. 10000000)
+
