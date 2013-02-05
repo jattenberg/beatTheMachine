@@ -3,84 +3,59 @@
 \newlabel{sec:intro}{{1}{1}}
 \citation{Reiter77closedworld}
 \citation{weiss10disjunct}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Background and Scope}{3}}
 \citation{shengKDD2008,raykar2009supervised}
 \citation{SettlesActiveLearning}
 \citation{winston1970learning}
 \citation{vanlehn1998analogy}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Background and Scope}{3}}
 \citation{elkan:2001cost}
-\citation{domingos1999metacost, Platt99probabilisticoutputs}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Unknown Unknowns}{5}}
-\newlabel{sec:unknowns}{{3}{5}}
-\newlabel{equ:expcost}{{1}{5}}
-\newlabel{equ:mincost}{{2}{5}}
+\citation{domingos1999metacost}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Unknown Unknowns}{4}}
+\newlabel{sec:unknowns}{{3}{4}}
+\newlabel{equ:expcost}{{1}{4}}
+\newlabel{equ:mincost}{{1}{4}}
 \citation{lewis94sequential}
 \citation{chow:57,chow:70}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The decisions made by a predictive model can be broadly separated into four conceptual regions: (i)\nobreakspace  {}The ``known knowns,'' which are the examples for which the model is mostly correct and is also confident of being correct; (ii)\nobreakspace  {}The ``known unknowns,'' which are the examples for which the model is often mistaken but also anticipates these mistakes by placing low confidence in the decisions; (iii)\nobreakspace  {}The ``unknown knowns,'' which are the examples for which the model is often correct but returns very low levels of confidence; and (iv)\nobreakspace  {}The ``unknown uknowns,'' which are the examples for which the model is wrong but also confident on being correct.}}{6}}
-\newlabel{fig:quadrant}{{1}{6}}
-\newlabel{def:ku}{{1}{6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces The decisions made by a predictive model can be broadly separated into four conceptual regions: (i)\nobreakspace  {}The ``known knowns,'' which are the examples for which the model is mostly correct and is also confident of being correct; (ii)\nobreakspace  {}The ``known unknowns,'' which are the examples for which the model is often mistaken but also anticipates these mistakes by placing low confidence in the decisions; (iii)\nobreakspace  {}The ``unknown knowns,'' which are the examples for which the model is often correct but returns very low levels of confidence; and (iv)\nobreakspace  {}The ``unknown uknowns,'' which are the examples for which the model is wrong but also confident on being correct.}}{5}}
+\newlabel{fig:quadrant}{{1}{5}}
+\newlabel{def:ku}{{1}{5}}
 \citation{weiss10disjunct}
-\citation{attenberg:2010inactive, attprov:kdd2010}
-\newlabel{def:uu}{{2}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces A typical classification setting. On the the top we see the decision boundary that minimizes the prediction prediction error of a inseparable training set. Additionally, we see the $\epsilon $-radius around the classifier where mistakes are though to occur. The bottom, we see the same classifier with the inclusion of small, disjunctive ``unknowns'', presenting mistakes that occur well outside a model's region of uncertainty. }}{8}}
-\newlabel{fig:unknown}{{2}{8}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Measuring Unknown Unkowns}{8}}
-\newlabel{sec:measure}{{4}{8}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Beat the Machine}{10}}
-\newlabel{sec:btm}{{5}{10}}
-\newlabel{fig:150}{{3(a)}{11}}
-\newlabel{sub@fig:150}{{(a)}{11}}
-\newlabel{fig:300}{{3(b)}{11}}
-\newlabel{sub@fig:300}{{(b)}{11}}
-\newlabel{fig:1500}{{3(c)}{11}}
-\newlabel{sub@fig:1500}{{(c)}{11}}
-\newlabel{fig:15000}{{3(d)}{11}}
-\newlabel{sub@fig:15000}{{(d)}{11}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces caption of subplots}}{11}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {$150$ $k$-NN Training Examples}}}{11}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {$300$ $k$-NN Training Examples}}}{11}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(c)}{\ignorespaces {$1,500$ $k$-NN Training Examples}}}{11}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(d)}{\ignorespaces {$15,000$ $k$-NN Training Examples}}}{11}}
-\newlabel{fig:uuvsku}{{3}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}BTM Task Design}{12}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces A screen-shot of the BTM interface on Mechanical Turk.}}{13}}
-\newlabel{fig:btm}{{4}{13}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Experimental Studies}{14}}
-\newlabel{fig:hate-speech}{{5(a)}{15}}
-\newlabel{sub@fig:hate-speech}{{(a)}{15}}
-\newlabel{fig:adult}{{5(b)}{15}}
-\newlabel{sub@fig:adult}{{(b)}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Distributions of the magnitude of the identified mistakes in the predictive model's output by BTM and by random sampling for two ad safety tasks. Each bar indicates the percentage of successfully identified mistakes that reside in the associated score range.}}{15}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Hate Speech}}}{15}}
-\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Adult Content}}}{15}}
-\newlabel{fig:results}{{6}{15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Learning curves generated by the models using cross-validation (BTM and student lines), and then use as test case for BTM the errors identified by random sampling (BTM on students), and vice versa (students on BTM).}}{16}}
-\newlabel{fig:curves}{{6}{16}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Current and Future Research}{16}}
+\citation{attenberg:2010inactive}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces A typical classification setting. On the the top we see the decision boundary that minimizes the prediction prediction error of a inseparable training set. Additionally, we see the $\epsilon $-radius around the classifier where mistakes are though to occur. The bottom, we see the same classifier with the inclusion of small, disjunctive ``unknowns'', presenting mistakes that occur well outside a model's region of uncertainty. }}{6}}
+\newlabel{fig:unknown}{{2}{6}}
+\newlabel{def:uu}{{2}{6}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Beat the Machine}{7}}
+\newlabel{sec:btm}{{4}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}BTM Task Design}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces A screen-shot of the BTM interface on Mechanical Turk.}}{8}}
+\newlabel{fig:btm}{{3}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Experimental Studies}{9}}
+\newlabel{fig:hate-speech}{{4(a)}{10}}
+\newlabel{sub@fig:hate-speech}{{(a)}{10}}
+\newlabel{fig:adult}{{4(b)}{10}}
+\newlabel{sub@fig:adult}{{(b)}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Distributions of the magnitude of the identified mistakes in the predictive model's output by BTM and by random sampling for two ad safety tasks. Each bar indicates the percentage of successfully identified mistakes that reside in the associated score range.}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(a)}{\ignorespaces {Hate Speech}}}{10}}
+\@writefile{lof}{\contentsline {subfigure}{\numberline{(b)}{\ignorespaces {Adult Content}}}{10}}
+\newlabel{fig:results}{{5}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Learning curves generated by the models using cross-validation (BTM and student lines), and then use as test case for BTM the errors identified by random sampling (BTM on students), and vice versa (students on BTM).}}{11}}
+\newlabel{fig:curves}{{5}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Impact in Industrial Deployments}{11}}
 \citation{Freund99ashort}
-\citation{chow:57,chow:70}
-\citation{herbei:2005}
-\newlabel{app:reject}{{7}{17}}
-\newlabel{eq:rej}{{3}{17}}
-\newlabel{eq:costrej}{{4}{17}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The reject and classification regions defined by Chow's original classification with a reject option criterion defined in Equation\nobreakspace  {}3\hbox {}}}{18}}
-\newlabel{fig:rejectdecision}{{7}{18}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The reject and classification regions defined by Herbei and Wegkamp's misclassification cost-sensitive classification with a reject option criterion defined in Equation\nobreakspace  {}4\hbox {} for different false negative costs ($\unhbox \voidb@x \hbox {cost}_{\unhbox \voidb@x \hbox {FN}} = \unhbox \voidb@x \hbox {cost}(0|1)$). }}{18}}
-\newlabel{fig:costdecision}{{8}{18}}
 \bibstyle{abbrv}
 \bibdata{att}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Conclusion and Future Work}{12}}
 \bibcite{attenberg:2010inactive}{1}
 \bibcite{chow:70}{2}
 \bibcite{chow:57}{3}
 \bibcite{domingos1999metacost}{4}
 \bibcite{elkan:2001cost}{5}
 \bibcite{Freund99ashort}{6}
-\bibcite{herbei:2005}{7}
-\bibcite{lewis94sequential}{8}
-\bibcite{raykar2009supervised}{9}
-\bibcite{Reiter77closedworld}{10}
-\bibcite{SettlesActiveLearning}{11}
-\bibcite{shengKDD2008}{12}
-\bibcite{vanlehn1998analogy}{13}
-\bibcite{weiss10disjunct}{14}
-\bibcite{winston1970learning}{15}
+\bibcite{lewis94sequential}{7}
+\bibcite{raykar2009supervised}{8}
+\bibcite{Reiter77closedworld}{9}
+\bibcite{SettlesActiveLearning}{10}
+\bibcite{shengKDD2008}{11}
+\bibcite{vanlehn1998analogy}{12}
+\bibcite{weiss10disjunct}{13}
+\bibcite{winston1970learning}{14}

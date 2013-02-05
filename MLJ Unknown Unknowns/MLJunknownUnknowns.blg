@@ -1,58 +1,49 @@
-This is BibTeX, Version 0.99d (TeX Live 2011)
+This is BibTeX, Version 0.99d (TeX Live 2010)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: MLJunknownUnknowns.aux
-White space in argument---line 13 of file MLJunknownUnknowns.aux
- : \citation{domingos1999metacost,
- :                                 Platt99probabilisticoutputs}
-I'm skipping whatever remains of this command
-White space in argument---line 20 of file MLJunknownUnknowns.aux
- : \citation{attenberg:2010inactive,
- :                                   attprov:kdd2010}
-I'm skipping whatever remains of this command
 The style file: abbrv.bst
 Database file #1: att.bib
-Warning--I didn't find a database entry for "WeissRarity"
 Warning--there's a number but no volume in chow:57
 Warning--empty journal in winston1970learning
-You've used 15 entries,
+You've used 14 entries,
             2118 wiz_defined-function locations,
-            598 strings with 5812 characters,
-and the built_in function-call counts, 5070 in all, are:
-= -- 503
-> -- 187
+            588 strings with 5664 characters,
+and the built_in function-call counts, 4737 in all, are:
+= -- 468
+> -- 174
 < -- 7
-+ -- 77
-- -- 59
-* -- 319
-:= -- 802
-add.period$ -- 46
-call.type$ -- 15
-change.case$ -- 73
++ -- 72
+- -- 55
+* -- 293
+:= -- 747
+add.period$ -- 43
+call.type$ -- 14
+change.case$ -- 68
 chr.to.int$ -- 0
-cite$ -- 17
-duplicate$ -- 218
-empty$ -- 447
-format.name$ -- 59
-if$ -- 1101
+cite$ -- 16
+duplicate$ -- 207
+empty$ -- 420
+format.name$ -- 55
+if$ -- 1033
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 13
-newline$ -- 76
-num.names$ -- 32
-pop$ -- 96
+int.to.str$ -- 14
+missing$ -- 12
+newline$ -- 71
+num.names$ -- 30
+pop$ -- 93
 preamble$ -- 1
-purify$ -- 58
+purify$ -- 54
 quote$ -- 0
-skip$ -- 159
+skip$ -- 151
 stack$ -- 0
-substring$ -- 326
-swap$ -- 60
+substring$ -- 296
+swap$ -- 59
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 60
+type$ -- 56
 warning$ -- 2
-while$ -- 55
-width$ -- 17
-write$ -- 163
-(There were 2 error messages)
+while$ -- 51
+width$ -- 16
+write$ -- 152
+(There were 2 warnings)

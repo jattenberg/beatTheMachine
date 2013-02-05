@@ -1,0 +1,31 @@
+
+How does this firm assess the strengths and weaknesses of any system
+and model?  Unfortunately for applying machine learning, there exists 
+no representative, benchmark, ``gold standard'' corpus of hate speech, 
+a trait common to many real-world machine learning problems.
+Traditional machine learning evaluation and training
+methods make an implicit closed-world
+assumption~\cite{Reiter77closedworld}. In logical systems, the
+closed-world assumption is that the only answers to a query $Q$ are those
+that are actually in the database. In the context of predictive
+modeling, our closed-world assumption is that our labeled 
+data are sufficient to give us a satisfactory estimation of
+model performance. Effectively, machine learning methods 
+make the assumption that regularities that have no or insufficient
+representation in the training data essentially do not exist. 
+Unfortunately, such an assumption is dangerously naive 
+in applications with limited labeled training
+data, small disjuncts~\cite{weiss10disjunct}, and/or possibly unknown
+selection biases. In these cases, we face this problem: 
+the model often cannot estimate properly
+its own performance in unseen data, and is vulnerable to the problem
+of \emph{unknown unknowns}.
+
+We will elaborate throughout the paper, but in a nutshell the problem is this: in ML research, we assume that the available data are representative and therefore we can use them safely to train and to evaluate our algorithms. Furthermore, and crucially, we assume that the models can estimate properly their own level of performance and report back accurate confidence metrics for different parts of the space. Assuming that we can know how well our algorithms are performing, we can work to improve the models, and/or improve the performance in regions of lower confidence in our predictions, and/or act based on this confidence.  We have faith in our training data, and we focus on what we can know---including \emph{knowing} what we don't know (e.g., regions of uncertainty in our learned model's behavior).
+
+The problem is that, for various reasons, processes that produce training data can completely miss important regions of the space.  Consider our case of identifying hate speech online: The category ``hate speech'' is relatively rare on the Web (fortunately) and extremely varied---a ``disjunctive concept'' in machine learning parlance.  If a certain type of hate speech is not included in the training data, the resultant learned classifier is likely to (i)~classify it as not-hate-speech, and worse, (ii)~do so with high confidence.  This is an ``unknown unknown''---the classifier does not ``know'' this sort of hate speech, and it doesn't know that it doesn't know it. So, the ``unknown unknowns'' belong to the regions in the space where the model estimates the misclassification cost to be low, while in reality the misclassification cost is high.
+
+This problem may be completely missed by standard ML evaluations: cross-validated error rates and AUCs for such models may look nearly perfect.  However, the machine learning scientist would be incorrect to report to the application stakeholders that the models are essentially perfect.  It is critical to emphasize that such evaluations only consider the ``known unknowns.'' However, stakeholders of ML models need to also consider the possible impact of the unknown unknowns. For example, being blindsided by a client who discovers a completely unknown error, or suffering an embarassing PR disaster if the vulnerability of the model is exposed publicly by a third party or competitor.   Finding the unknown unknowns, in a machine learning context, is what this paper is about.
+
+We present a novel framework for thinking about errors of machine learning models that highlights the unknown unknowns (plenty of work has focused on the known unknowns).  We then present a game-structured system (Beat the Machine) that takes advantage of crowdsourcing to help us identify the unknown unknowns.  This system is fully implemented at industrial scale; we discuss several design iterations that each presented hurdles to overcome and led to the current system.  Finally we present experimental results demonstrating that on real problems (including finding hate speech pages), explicitly focusing on finding unknown unknowns (with Beat the Machine) indeed finds pages that were completely missed by the prior system, are systematic errors (rather than just isolated outliers), and are systematically different from the prior training data. 
+

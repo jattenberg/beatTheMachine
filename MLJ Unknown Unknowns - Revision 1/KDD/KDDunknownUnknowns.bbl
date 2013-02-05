@@ -1,0 +1,84 @@
+\begin{thebibliography}{10}
+
+\bibitem{attenberg:2010inactive}
+J.~Attenberg and F.~Provost.
+\newblock {Inactive Learning? Difficulties Employing Active Learning in
+  Practice}.
+\newblock {\em SIGKDD Explorations}, 12(2):36--41, 2010.
+
+\bibitem{chow:70}
+C.~Chow.
+\newblock {On optimum recognition error and reject tradeoff}.
+\newblock {\em IEEE Transactions on Information Theory}, 16(1):41--46, January
+  1970.
+
+\bibitem{chow:57}
+C.~K. Chow.
+\newblock {An Optimum Character Recognition System Using Decision Functions}.
+\newblock {\em IEEE Transactions on Electronic Computers}, (4):247--254,
+  December 1957.
+
+\bibitem{domingos1999metacost}
+P.~Domingos.
+\newblock Metacost: A general method for making classifiers cost-sensitive.
+\newblock In {\em KDD '99}, 1999.
+
+\bibitem{elkan:2001cost}
+C.~Elkan.
+\newblock {The Foundations of Cost-Sensitive Learning}.
+\newblock In {\em IJCAI}, pages 973--978, 2001.
+
+\bibitem{Freund99ashort}
+Y.~Freund and R.~E. Schapire.
+\newblock A short introduction to boosting, 1999.
+
+\bibitem{herbei:2005}
+R.~Herbei and M.~H. Wegkamp.
+\newblock {Classification with reject option}.
+\newblock {\em Can J Statistics}, 34(4):709--721, 2006.
+
+\bibitem{lewis94sequential}
+D.~D. Lewis and W.~A. Gale.
+\newblock A sequential algorithm for training text classifiers.
+\newblock In {\em SIGIR '94}, pages 3--12, New York, NY, USA, 1994.
+  Springer-Verlag New York, Inc.
+
+\bibitem{raykar2009supervised}
+V.~Raykar, S.~Yu, L.~Zhao, A.~Jerebko, C.~Florin, G.~Valadez, L.~Bogoni, and
+  L.~Moy.
+\newblock {Supervised Learning from Multiple Experts: Whom to trust when
+  everyone lies a bit}.
+\newblock In {\em ICML}, pages 889--896. ACM, 2009.
+
+\bibitem{Reiter77closedworld}
+R.~Reiter.
+\newblock On closed world data bases.
+\newblock In {\em Logic and Data Bases}, pages 55--76, 1977.
+
+\bibitem{SettlesActiveLearning}
+B.~Settles.
+\newblock Active learning literature survey, 2010.
+
+\bibitem{shengKDD2008}
+V.~S. Sheng, F.~Provost, and P.~G. Ipeirotis.
+\newblock Get another label? improving data quality and data mining using
+  multiple, noisy labelers.
+\newblock In {\em KDD '08}, 2008.
+
+\bibitem{vanlehn1998analogy}
+K.~VanLehn.
+\newblock {Analogy events: How examples are used during problem solving}.
+\newblock {\em Cognitive Science}, 22(3):347--388, 1998.
+
+\bibitem{weiss10disjunct}
+G.~M. Weiss.
+\newblock The impact of small disjuncts on classifier learning.
+\newblock In R.~Stahlbock, S.~F. Crone, and S.~Lessmann, editors, {\em Data
+  Mining}, volume~8, chapter~9, pages 193--226. Springer US, Boston, MA, 2010.
+
+\bibitem{winston1970learning}
+P.~Winston.
+\newblock {Learning structural descriptions from examples}.
+\newblock 1970.
+
+\end{thebibliography}

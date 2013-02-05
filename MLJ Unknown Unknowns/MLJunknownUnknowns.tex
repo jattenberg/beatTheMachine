@@ -13,6 +13,24 @@
 
 \newenvironment{xmpl}{\begin{example}\hspace{-.5em} \begin{textit}}{\end{textit}$\Box$\end{example}}
 
+% Space-saving commands follow
+
+\usepackage[asymmetric, top=1in, bottom=2.2in, inner=1in, outer=2.3in, nofoot, pdftex]{geometry}
+
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+%\setlength{\headsep}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\topmargin}{0pt}
+\setlength{\topsep}{0pt}
+\setlength{\partopsep}{0pt}
+
+%\linespread{0.98}
+
+\usepackage{times}
+
+% TODO macros
+
 \newcommand{\todo}[1]{{\bf [TODO:{\em {#1}}]}}
 \newcommand{\josh}[1]{{\bf [JOSH:{\em {#1}}]}}
 \newcommand{\panos}[1]{{\bf [PANOS:{\em {#1}}]}}
@@ -28,8 +46,7 @@
 \title{Beat the Machine: Challenging Humans to Find a Predictive Model's ``Unknown Unknowns''}
 
 
-\author{Josh Attenberg         \and
-        Panagiotis G.\ Ipeirotis \and Foster Provost %etc.
+\author{Josh Attenberg         \and   Panagiotis Ipeirotis \and Foster Provost
 }
 
 
@@ -76,7 +93,7 @@
 
 \begin{abstract}
 
-We present techniques for gathering data that expose errors of automatic predictive models.  In certain common settings, traditional methods for evaluating predictive models tend to miss rare-but-important errors---most importantly, cases for which the model is confident of its prediction (but wrong).  In this paper, we present a system that, in a game-like setting, asks humans to identify cases that will cause the predictive-model-based system to fail. Such techniques are  valuable in discovering problematic cases that do not reveal themselves during the normal operation of the system, and may include cases that are rare but catastrophic. We describe the design of the system, including design iterations that did not quite work. In particular, the system incentivizes humans to provide examples that are difficult for the model to handle, by providing a reward proportional to the magnitude of the predictive model's error. The humans are asked to ``\emph{Beat the Machine}'' and find cases where the automatic model (``\emph{the Machine}'') is wrong. Experiments show that the humans using Beat the Machine identify more errors than traditional techniques for discovering errors in from predictive models, and indeed, they identify many more errors where the machine is confident it is correct.  Further, the cases the humans identify seem to be not simply outliers, but coherent areas missed completely by the model.  Beat the machine identifies  the ``unknown unknowns.''
+We present techniques for gathering data that expose errors of automatic predictive models.  In certain common settings, traditional methods for evaluating predictive models tend to miss rare-but-important errors---most importantly, cases for which the model is confident of its prediction (but wrong).  In this paper, we present a system that, in a game-like setting, asks humans to identify cases that will cause the predictive-model-based system to fail. Such techniques are  valuable in discovering problematic cases that do not reveal themselves during the normal operation of the system, and may include cases that are rare but catastrophic. We describe the design of the system, including design iterations that did not quite work. In particular, the system incentivizes humans to provide examples that are difficult for the model to handle, by providing a reward proportional to the magnitude of the predictive model's error. The humans are asked to ``\emph{Beat the Machine}'' and find cases where the automatic model (``\emph{the Machine}'') is wrong. Experiments show that the humans using Beat the Machine identify more errors than traditional techniques for discovering errors in from predictive models, and indeed, they identify many more errors where the machine is confident it is correct.  Further, the cases the humans identify seem to be not simply outliers, but coherent areas missed completely by the model.  Beat the machine identifies  the ``unknown unknowns.''  Beat the Machine is deployed at industrial scale.  The main impact has been that firms are changing their perspective on and practice of evaluating predictive models.
 
 
 \begin{quotation}
@@ -89,12 +106,12 @@ We present techniques for gathering data that expose errors of automatic predict
 \input{1-introduction.tex}
 \input{2-background.tex}
 \input{3-unknowns.tex}
-\input{4-measuring.tex}
+%\input{4-measuring.tex}
 \input{5-btm-design.tex}
 \input{6-results.tex}
 \input{7-future.tex}
 
-\input{8-appendices.tex}
+% \input{8-appendices.tex}
 
 \footnotesize{
 \bibliographystyle{abbrv}

@@ -32,11 +32,6 @@ C.~Elkan.
 Y.~Freund and R.~E. Schapire.
 \newblock A short introduction to boosting, 1999.
 
-\bibitem{herbei:2005}
-R.~Herbei and M.~H. Wegkamp.
-\newblock {Classification with reject option}.
-\newblock {\em Can J Statistics}, 34(4):709--721, 2006.
-
 \bibitem{lewis94sequential}
 D.~D. Lewis and W.~A. Gale.
 \newblock A sequential algorithm for training text classifiers.
