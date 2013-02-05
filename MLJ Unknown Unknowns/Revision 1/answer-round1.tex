@@ -1,0 +1,590 @@
+\documentclass[letterpaper]{article}
+
+\usepackage[letterpaper, top=1in, bottom=1in, left=1in, right=1in]{geometry}
+
+\usepackage{xr}
+\usepackage{url}
+\usepackage[textsize=footnotesize]{todonotes}
+\usepackage{microtype}
+
+\usepackage[pdfpagemode={UseOutlines},bookmarks,bookmarksopen=false,pdfstartview={FitH},bookmarksnumbered=true,colorlinks,bookmarksnumbered,pdftex]{hyperref}
+
+\usepackage{cmap} % taking care of ligatures in PDFs (ligature: ff, fi, etc.)
+\usepackage{mmap} % taking care of ligatures in PDFs (ligature: ff, fi, etc.)
+
+\externaldocument{MLJUnknownUnknowns}
+
+\begin{document}
+
+
+\section{Answers to the comments of the Associate Editor}
+
+
+
+\begin{enumerate}
+
+\item \textbf{Editor:} \emph{The reviewers generally liked the goal of the paper, but there were some concerns}
+
+\textbf{Answer:} Thank you for your comments on our paper. We took a careful look at our manuscript and made changes, following the comments. We hope that these changes address your concerns.
+
+\item \textbf{Editor:}  \emph{The evidence of potential impact relies on a statement of interest and use by 3 anonymous companies. As the special issue is designed to be a showcase of what ML is doing for society, it is problematic for the special issue to have the impact be completely anonymous. As outlined in our CFP, we would particularly like expert commentary, and possibly industrial co-authors.}
+
+\textbf{Answer:} We have now added the names of the three companies that have adopted or were influenced by our ``Beat the Machine'' system (namely, Integral Ad Science, oDesk, and Tagasauris). While the affiliation of the authors is academic, all co-authors have substantial industrial experience working for these companies, and have direct and first-hand experience of the problems that the BTM system was addressing. We hope that this clarification alleviates the concerns.
+
+\item \textbf{Editor:}  \emph{The authors have a conference paper (archival) that has quite a lot of overlap with the submitted paper. As far as we can tell the main contribution beyond the conference paper is Section 6: Impact in Industrial Deployments, which is the section that is not substantial enough to allow the paper to fit our CFP at the moment, as discussed above. Since the MLJ paper should have at least 30\% more material than in the conference version, that section would need to be expanded to be more substantial to fulfill the requirement. The paper should also address how the current work differs from the conference work. }
+
+\textbf{Answer:} We would like to clarify that the ``archival'' paper is a \emph{workshop} paper at HCOMP 2011, not a conference paper. The current submission introduces a proper formalization of the concept of unknown unknowns, 
+
+\item \textbf{Editor:}  \emph{Some of the reviewers did not see how the information from the Beat the Machine system was used in improving the underlying ML classifier.}
+
+\textbf{Answer:} The focus of the current work is on the evaluation and detection of classification errors as early as possible, not on improving the underlying classifier. Using the unknown unknowns to improve the ML classifier is an interesting direction for future research, but not the focus of this paper.
+
+\item \textbf{Editor:}  \emph{Steps in data preparation and machine learning seem to be missing.}
+
+\textbf{Answer:} We now provide the details about the classifiers, how they were trained, and provide other details requested by the reviewers.
+
+\item \textbf{Editor:}  \emph{Steps in data preparation and machine learning seem to be missing. We encourage the authors to submit a revision to address the problems discussed above, in addition to the other issues mentioned by the reviewers. Please prepare a point by point response to the reviewers when the paper is resubmitted. The due date for the resubmission is February 20.}
+
+\textbf{Answer:} -
+
+
+
+\end{enumerate}
+
+
+
+
+\section{Answers to the comments of Reviewer 1} \label{sec:reviewer1}
+
+
+\begin{enumerate}
+
+\item \textbf{Reviewer 1:} \emph{In this paper the authors propose a system called Beat the Machine. Given a classifier, Beat The System solicits users to submit examples. Users are given reward for submitting examples that are classified incorrectly by the system and with high confidence. The authors propose a few iterations of the system design which mainly differ in the reward given for a submission. Finally, the authors present experimental results on a hate speech detector and an adult content detector.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 1:} \emph{ I have the following major concerns about this paper:}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 1:} \emph{1. Rather than being an application of machine learning, this paper is more about finding the limitations of a machine learning system using human computation to identify the so-called "unknown unknowns".}
+
+\textbf{Answer:} Based on our experiences, ``finding the limitations of a machine learning system'' is a very important aspect of understanding how the classifier is expected to behave when released in production. The BTM approach offers a proactive evaluation technique that tries to identify classifier problems before they become real business problems for the stakeholders.
+
+
+\item \textbf{Reviewer 1:} \emph{2.  The paper gives experimental evidence to suggest that beat the machine system finds "regions of the problem space" where a classifier doesn't know that it is performing bad there. However, there is no evidence of impact or potential impact on science or society other than the claims of anonymous companies showing interest in the proposed system.}
+
+\textbf{Answer:} We have now added the names of the companies that use the system in the paper.
+
+\item \textbf{Reviewer 1:} \emph{3. Many important details are missing in data preparations and experiment setup. For example, here are some of the questions I had about the experiments:}
+
+\textbf{Answer:} --
+
+\item \textbf{Reviewer 1:} \emph{What was the classifier that was challenged in either case? What was the training data that was used for this purpose? How many training examples were there for training?}
+
+\textbf{Answer:} For both tasks (adult and hate speech), the underlying classifier was a model trained using logistic regression. Each classifier was trained with 20,000 URLs.
+
+\item \textbf{Reviewer 1:} \emph{How many humans participated in this study?}
+
+\textbf{Answer:} For the hate speech task, a total of 28 workers participated, we collected 500 URLs. For the adult content task, a total of 25 workers participated and again we collected 500 URLs. We added the clarification in the paper.
+
+\item \textbf{Reviewer 1:} \emph{What guidelines did they use for submitting URLs?}
+
+\textbf{Answer:} In Figure~\ref{fig:btm}, we show the interface shown to the the crowdsourced users, together with the guidelines. The instructions were purposefully brief and we did not give any significant background to the users about the classifier. The goal was for the users to treat the classifier as an opaque black box, that can only be probed for vulnerabilities, and would return only the classification result for a URL.
+
+\item \textbf{Reviewer 1:} \emph{ There is a not adequate detail on stratified random examination. How were the "random" URLs selected?  Were they completely selected at random or were they some random URLs that contained hate/racist/adult content words? If they were just random URLs with no relevance to the problem at hand, I am not even sure it is a fair comparison considering that the space of URLs is huge.}
+
+\textbf{Answer:} We have selected the URLs from the stream of web pages that are classified daily by the classifier. Each URL had an expected misclassification cost assigned by the classifier. (When the classifier was uncertain about the classification, the expected misclassification cost was high, and vice versa.) We then formed $k$ equal-width bins, splitting the URLs based on their expected misclassification cost, and we picked an equal number of URLs from each bin: Out of the total of $N$ URLs used for testing, we had  $\frac{N}{k}$ URLs from each bin.
+
+
+\item \textbf{Reviewer 1:} \emph{ 4. It was disappointing to see that the paper stops after identifying "unknown unknowns". This paper would have had significant impact  if the information found from Beat The Machine system was used in improving the underlying machine learning classifier.  In this sense, the realized or potential impact of the content presented in this paper is much lower than what could have been achieved.}
+
+\textbf{Answer:} The focus of the paper is on improving and accelerating the evaluation of classification systems, to identify unexpected areas of failure. While we agree that exploiting the identified weaknesses to improve the classifier is an important and promising direction for future research, this research direction is out of the scope of the current (short) paper.
+
+\item \textbf{Reviewer 1:} \emph{ Please summarize the paper's claims about impact achieved from a machine learning advance: The main practical impact of this paper is a system that results in a new approach for testing and debugging automatic machine learning models.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 1:} \emph{Impact: In my opinion the significance of this impact is likely to be minor. The paper gives experimental evidence to suggest that beat the machine system finds "interesting areas of space" where a classifier doesn't know that it is performing bad there. However, there is no evidence of impact  or potential impact other than the claims of anonymous companies showing interest in the proposed system. There are no details of the impact made by the proposed system in any of these companies.}
+
+\textbf{Answer:} We have now added the names of the companies in the paper. TODO.
+
+\item \textbf{Reviewer 1:} \emph{Novelty: This paper is about challenging humans to find examples where a classifier is likely to be wrong with high confidence. While there is no new machine learning technology developed in this paper, the idea of using humans to find challenging examples for a machine learning system does seem novel.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 1:} \emph{Problem description: This paper first describes a system and is subsequently applied to a problem domain. In particular, the developed system is applied to a hate content detector and an adult content detector.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 1:} \emph{Data preparation: Many steps of data preparation are missing. The authors do not reveal any details about the original classifiers or the data that was used for training the system. They do not give any details on how the humans went about finding the URLs.  Please see above for a partial list of unanswered questions.}
+
+\textbf{Answer:} We now provide additional details about the underlying classifiers, and give the instructions given to humans that undertook the BTM task. We hope that the provided answers satisfy the raised concerns.
+
+\item \textbf{Reviewer 1:} \emph{ Machine learning: The machine learning component of the paper is limited. The paper is mainly about building a system where humans can submit examples in a game like environment to challenge a machine learning system.}
+
+\textbf{Answer:} TODO
+
+\item \textbf{Reviewer 1:} \emph{Results: The methodology seems appropriate for the system described. However, the system itself stops at identifying unknown unknowns and does not do anything interesting with what is identified.}
+
+\textbf{Answer:} We believe that identifying the unknown unknowns, and warning the stakeholders of the classifier about the \emph{unexpected} weaknesses, is an interesting result by itself. We are not aware of any other system that can achieve this goal.
+
+\item \textbf{Reviewer 1:} \emph{Domain expert: The authors do provide comments from company founders and data scientists about this system being deployed in their companies However, the names of these companies and the names of the persons who spoke for their behalf are not revealed. Nor is the actual impact in those companies quantitatively revealed.}
+
+\textbf{Answer:} We provide now the names of the companies. We also provided the tests for Integral Ad Science, for quantifying the effect of the BTM system in identifying faster cases of failure, that would be especially problematic if they happened while the system was protecting the ad campaign of a customer. 
+
+\item \textbf{Reviewer 1:} \emph{Infusion: The authors claim that many (unidentified) companies are currently using/ or interested in using  the proposed system.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 1:} \emph{Lessons: The paper does identify a potentially interesting problem to the machine learning community.}
+
+\textbf{Answer:} -
+
+
+\end{enumerate}
+
+
+
+\section{Answers to the comments of Reviewer 3} \label{sec:reviewer3}
+
+
+\begin{enumerate}
+
+
+\item \textbf{Reviewer 3:} \emph{ This paper describes the impact of a technique (Beat the Machine) for making use of crowd sourcing in order to identify test examples that are: (a)~likely to be classified incorrectly by a learned classifier, (b)~about which the classifier is confident, and (c)~that, if classified incorrectly, can be extremely costly. These types of examples arise in learning scenarios where there is significant class imbalance and where misclassifying an instance from the negative class is expensive either monetarily or otherwise.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 3:} \emph{ Specifically, this technique, according to the authors, has (a)~changed the way one medium-scale company evaluates its systems.  This company does "massive-scale webpage classification in the online advertising space."  This same company has invested the industrial development of Beat the Machine and is applying it to tasks beyond the initially intended application. (b)~directly influenced the workflow design of a large firm that runs an online labor marketplace.  For instance, Beat the Machine has been deployed to test a job classification engine. (c)~has been deployed as part of an image-tagging service for a third company.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 3:} \emph{ More generally, Beat the Machine provides a new approach for testing machine learning models where the misclassification of rare, but systematic, cases can be problematic, if not catastrophic.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 3:} \emph{ 2. Impact: The companies' names are not given, nor is the impact quantified.  Here we are relying entirely on the honesty of the authors.  Still, I judge the impact to be major.  The authors make a good case for the significant negative consequences of *not* finding the types of examples identified through Beat the Machine.  That at least three companies have adopted it for different types of applications attests to its utility.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 3:} \emph{ 3. Novelty: The paper does not describe an application of ML per se.  Instead, it addresses a type of domain that is difficult for classifier-learning systems.  It provides an approach for gathering test examples that are selected precisely for their ability to challenge the learned classifier.  This notion is similar to employing experts to attempt to breach security mechanisms, in order to ensure their strength.  To the best of my knowledge, the authors' approach is novel.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 3:} \emph{ 4. Problem description: In general, the problem domain is any domain with the properties described above.  The problem domain used as an example throughout the paper is classification of web pages as containing/not containing objectionable content such as "hate speech."  The problem domain is described sufficiently to be understandable.}
+
+\textbf{Answer:} -
+
+\item \label{whycost} \textbf{Reviewer 3:} \emph{ Unfortunately, in its formal definition of "unknown unknowns", the paper conflates probability with cost, is unclear on the use of "expected valued", and is highly repetitive.  More specific details on these points can be found below.}
+
+\textbf{Answer:} We shared the concern about the mix of probabilities and expected cost. As shown in Equations~\ref{equ:expcost} and~\ref{equ:mincost}, the expected misclassification cost is directly related to the returned probability estimate across the potential labels for each example, hence we often use the terms interchangeably when we do not expect a confusion. We opted to use the term ``expected misclassification cost'' due to cases where the prediction maybe highly uncertain but still have low expected misclassification cost (and therefore be inconsequential). Consider for example the case of adult content classification into four categories: ``G'' for general-audience, ``P'' for content requiring parental supervision, ``R'' for adults-only, and ``X'' for hard-core porn. The misclassification cost of $X \rightarrow G$ is typically high, while the cost for a $P \rightarrow R$ is typically much lower. If we simply rely on probability values, an example classified as 50\% X and 50\% G is equally uncertain to an example classified as 50\% P and 50\% R. However, the expected misclassification cost of the former is much higher, showing the need to introduce costs in the definition of ``unknown unknowns.''
+
+\item \textbf{Reviewer 3:} \emph{ 5. Data preparation: The mechanism for gathering data through Beat the Machine is clear.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 3:} \emph{ Though the focus of the paper is Beat the Machine (BTM) and identification of web pages with objectionable content is only one example where it could be used, this particular domain *is* the one on which the BTM approach is validated.  It is clear that the examples are web pages, but details are not given on how they are featurized for learning.  For example, footnote 1 on page 3 says web pages are represented by their words, links, images, metadata, etc.  Are images really represented in the features?  How? (Because this work was done for a company that is not even named, I imagine the data are proprietary.)}
+
+\textbf{Answer:} We apologize for the confusion. For (some) images, we were using a third-party classification service that was returning information about the content of the image (e.g., if there is suspicion for nudity). To avoid any uneccessary confusion, we removed the ``images'' part from the paper, as it is not of primary importance for this paper.
+
+\item \textbf{Reviewer 3:} \emph{ 6. Machine learning: As for the previous question, the point of the paper is not any specific machine learning system or algorithm.  But one is used to validate the approach.  However no details at all are provided for the algorithm, so the specific experiments detailed in Section 5 ("Experimental Studies") would not be reproducible.}
+
+\textbf{Answer:} We now added some details about the underlying classification system (e.g., size of the training set, algorithm used for training the classifier). Unfortunately, since the models are proprietary, we cannot provide many additional details regarding their featurization, or the collection of training data, beyond the details that we have already in the paper. Given that BTM treats the underlying classification model as a black box, we hope that this is not a significant problem. 
+
+\item \textbf{Reviewer 3:} \emph{ Still, the experiments are described in enough detail that we can understand what was done and how.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 3:} \emph{ 7. Results:  The experiments are carried out on a specific domain (web page objectionable content of two types: hate speech and adult content). BTM is compared to stratified random examination.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 3:} \emph{ Basically, the authors are showing that for a specific model builder for a specific domain (or pair of domains), it makes more sense to use BTM than the method currently used for that system.  The results are compelling, and the questions asked are appropriate.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 3:} \emph{ To the extent that we care that BTM is making an impact in a real application, this is a fine evaluation.  It does not prove its utility more generally.}
+
+\textbf{Answer:} TODO
+
+\item \textbf{Reviewer 3:} \emph{ 8. Domain expert: Given the adoption of the BTM technique by at least three companies, we can take this as confirmation by domain experts of BTM's utility. The paper is written in such a way that it would be understandable by an expert with data that had the general properties of concern to the authors. Most of the results would be interpretable by domain experts who were familiar with classifier learning.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 3:} \emph{ 9. Infusion: The authors clearly describe how BTM has been incorporated into deployed systems.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 3:} \emph{ 10. Lessons: One of the strengths of the paper is that it details the evolution of BTM, explaining clearly why earlier versions of it did not achieve the authors' goals as well as the final version.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 3:} \emph{ Though I have recommended accepting this paper with minor revisions, by "minor" I am referring to overall content and experiments.  The writing itself could use more significant work.  Because I am sympathetic to the goals of the paper and would be happy to see it accepted, below I provide more detail on the changes I would recommend.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 3:} \emph{ Issues of clarity: Page 2, lines 28-35.  Unknown unknowns are introduced as being examples on which a classifier is confident but actually wrong.  In the final two lines of the paragraph, an unknown unknown is suddenly described in terms of misclassification cost.  Throughout the paper, probability, confidence, and cost are confounded.  I would recommend defining unknown unknowns in terms of confidence/probabilities, and keeping cost out of that definition. Cost can then be introduced on top of the definition, as unknown uknowns are, for a non-trivial number of domains, precisely those cases whose misclassification can be costly.  The fundamental problem addressed by the paper is clear and important, but the attempt at a formal definition is problematic as is.}
+
+\textbf{Answer:} TODO
+
+\item \textbf{Reviewer 3:} \emph{ Page 3, lines 23-26: again, cost and probability are muddled here.}
+
+\textbf{Answer:} TODO
+
+\item \textbf{Reviewer 3:} \emph{ Section 3 is especially problematic.  First, a direct relationship is assumed between confidence and cost, and that isn't necessarily true. As above, I recommend defining unknown unknowns (and the other types of known/unknowns) in terms of a system's level of confidence and its probability of being incorrect.  (For Fig 1, for example, the y axis would be the system's estimated confidence.  The x axis would by the system's actual probability of being incorrect.)}
+
+\textbf{Answer:} Please see the answer above (item~\ref{whycost}) for the justification of our choice to use misclassification cost in the definition, instead of probability and confidence. 
+
+\item \textbf{Reviewer 3:} \emph{Definition 1: Be careful about parallel sentence construction.  "We denote by...., and ... be...." should be "Let .... be ..., and let .... be...."}
+
+\textbf{Answer:} TODO
+
+\item \textbf{Reviewer 3:} \emph{ This definition says that the *actual* misclassification cost ExpCost(x)... Using expected cost notation for the actual cost, which is a constant for any given x, is problematic.}
+
+\textbf{Answer:} Agreed. We removed the hat notation for the estimated cost, calling it just $\mathit{ExpCost}$, and we use the term $\mathit{Cost}$ for the actual misclassification cost.
+
+\item \textbf{Reviewer 3:} \emph{ "prediction-time classification"?  This is not a term I've heard; nor could I find it.  Rewrite or delete the sentence that contains it.}
+
+\textbf{Answer:} Removed the term ``prediction-time''.
+
+\item \textbf{Reviewer 3:} \emph{ In the next paragraph, you say "this model is likely to encounter examples eliciting a high degree of predicted uncertainty".  I don't see why this is the case.  Please clarify.}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ Page 6, around line 39/40, you say "data is gathered by some random process, for instance via active learning".  While active learning can employ a random process, this is not generally the case.  What are you really trying to say here?}
+
+\textbf{Answer:} We removed the term ``random'' that was causing confusion.
+
+\item \textbf{Reviewer 3:} \emph{ The paragraph that begins "Finally, from Figure 1, we can see" looks textually like it's still part of the description of Definition 2, but it clearly isn't. The formatting needs to be fixed.}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ In addition to the probability/cost conflation, this section is highly repetitive.  The paper takes 6 pages to set up the problem and then 6 to detail the system, validate it, and give evidence of its impact.  The former can easily be condensed.  In fact, condensing it would likely make it more clear.}
+
+\textbf{Answer:} TODO
+
+\item \textbf{Reviewer 3:} \emph{Issues with Section 5, Experimental Studies: In the comparison with stratified random examination, you say that "they are designed to assess different quantities".  So make it clear up front that you expect them to be different and that you do the experiment to verify the parts of the example space that each one focuses on.}
+
+\textbf{Answer:} TODO
+
+\item \textbf{Reviewer 3:} \emph{ You refer to "natural error rate".  What do you mean by this?}
+
+\textbf{Answer:} Rephrased to clarify that this is the error rate when tested with random URLs.
+
+\item \textbf{Reviewer 3:} \emph{ In the comparison of error severity, you say "1000 means that the classifier was certain of one class and the actual class was the other."  Does this hold true for both majority->minority and minority->majority?  Or is it only in cases where the classifier thought "majority" and it was really "minority"?}
+
+\textbf{Answer:} In this case, we refer only to cases where the classifier thought that page contained no offensive content, which is the final design of the BTM system. (See Section~\ref{sec:btm} for the rationale for this choice.)
+
+\item \textbf{Reviewer 3:} \emph{ Again, in lines 39-41 on page 10, there is a confounding of cost and probability.}
+
+\textbf{Answer:} TODO
+
+\item \textbf{Reviewer 3:} \emph{ The final paragraph of the same subsection is grammatically problematic and awkward.  It needs to be fixed.}
+
+\textbf{Answer:} TODO
+
+\item \textbf{Reviewer 3:} \emph{ Other edits (typos, wording, etc.):}
+
+\textbf{Answer:} TODO
+
+\item \textbf{Reviewer 3:} \emph{ Beat the Machine is sometimes written with quotes, sometimes without, sometimes italicized, sometimes not, sometimes upper case, sometimes not... In general, this needs to be cleaned up for consistency.}
+
+\textbf{Answer:} We have unified the different styles used to refer to the BTM system.
+
+\item \textbf{Reviewer 3:} \emph{ Similary, unknown unknowns is written in all sorts of formats in all sorts of places, even within the same paragraph.  This can be very distracting to the reader.  The same is true for known unknowns and all other variations.}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ Abstract "predictive-model-based" -> "predictive model-based"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "cases that do not reveal" -> "cases that may not reveal"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ Section 1 "learing" -> "learning"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "based on models... and produces" -> change "produces" to "produce"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "performance in unseen data" -> "performance on unseen data"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "ML research" -> "machine learning (ML) research" After that, can use ML.}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ page 2, line 37/38: "AUC" used before defined.}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{Section 2 "to prepare to deal with" -> "to prepare for"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ One of the requirements for crowdsourcing is having a problem that the "average person" is able to address.  The "hate speech" domain is one such problem, and there are others as well, some of which are described in Section 6. I recommend giving several such examples as early as Section 2, so that the reader is clear that BTM can indeed have broad applicability.}
+
+\textbf{Answer:} We introduced a forward pointer to Section~\ref{sec:impact}, to indicate that the system has been used in a variety of different settings.
+
+\item \textbf{Reviewer 3:} \emph{ "generaliry" -> "generality"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "it can be very costly to find very few positive examples" - awkward. rephrase.}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "far less that" -> "far less than"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ Page 3, lines 47-49: The transition to active learning is appropriate, but awkwardly written.}
+
+\textbf{Answer:} TODO
+
+\item \textbf{Reviewer 3:} \emph{ "where we would think to find errors" -> "where we would expect to find errors"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "a system to use human workers" -> "a system that uses human workers"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "confident and wrong" -> "confident but wrong"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "workers that discover" -> "workers who discover"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "participation in the tasks" - be more specific about "the tasks"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "We describe our first experiences by the live deployment..." Huh?  Awkward as written.}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ Section 3 "The task of a classification is to construct" -> "The learning task is to construct"}
+
+\textbf{Answer:} Fixed
+
+\item \textbf{Reviewer 3:} \emph{ "gives birth to" -> "gives rise to"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "that your model is known" -> "that a model is known"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "discussed previously" -> "discussed above"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ Caption for Figure 2: refers to the figures as "top" and "bottom", but they're side by side.}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "Call such examples" -> "We call such examples"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "examples that the model is quite certain a correct label can be assigned" - incorrect grammar}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "we see an a region"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ Section 4 "can be challenge" -> "can be a challenge"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "errors would be misclassified" -> "errors will be misclassified" (for verb tense consistency"}
+
+\textbf{Answer:} Fixed
+
+\item \textbf{Reviewer 3:} \emph{ "examples truly of" -> "examples of"}
+
+\textbf{Answer:} TODO
+
+\item \textbf{Reviewer 3:} \emph{ "This is problematic" - be careful to say what "this" is.}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "examples truly in the minority class" -> examples whose true class is the minority class.}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "relatively accurate classifier, with 95\% error rate" - surely you don't mean this.}
+
+\textbf{Answer:} :-) Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ even "outlier" cases can cause significatn damage" - be more precise about what you mean by "outlier"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{"client's expectations" -> "clients' expectations"}
+
+\textbf{Answer:} We refer to a single client, whose expectations were not met.
+
+\item \textbf{Reviewer 3:} \emph{"hackers that are hired" -> "hackers who are hired"}
+
+\textbf{Answer:} Fixed
+
+\item \textbf{Reviewer 3:} \emph{"client's expectations" -> "the client's expectations"}
+
+\textbf{Answer:} Fixed
+
+\item \textbf{Reviewer 3:} \emph{Section 4.1 The first sentence is internally repetitive and awkward.}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ There are many issues in this and subsequent sections with verb tense. I suggest describing the different versions of BTM in the present tense.  But more importantly, there needs to be a check for consistency.}
+
+\textbf{Answer:} Fixed
+
+\item \textbf{Reviewer 3:} \emph{ Also, "Design 1" is labeled as such, but subsequent designs are titled only by what they added to the previous.  Clearly mark Design 1, Design 2, Design 3 as such.}
+
+\textbf{Answer:} Fixed
+
+\item \textbf{Reviewer 3:} \emph{ Fig 3 did not print clearly for me.  If included, it needs to be a higher- resolution screen shot.}
+
+\textbf{Answer:} We increased the size and resolution of the image.
+
+\item \textbf{Reviewer 3:} \emph{ Page 8, lines 33-34.  So what exactly did this mean on a practical level? That they had few people choose to do the task?  That few would return to do it?}
+
+\textbf{Answer:} TODO
+
+\item \textbf{Reviewer 3:} \emph{ Page 8, lines 47-52.  Get rid of the parentheses.  They're unnecessary and unhelpful.}
+
+\textbf{Answer:} TODO
+
+\item \textbf{Reviewer 3:} \emph{ "misclassification cost are given a the reward is small" - huh?}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ Section 5 "we described the concept of the" -> "we defined"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "a gamified structure" - "gamified"???}
+
+\textbf{Answer:} We think that the term ``gamified structure'' describes accurately the BTM system. We can remove the term, if you feel strongly otherwise.
+
+\item \textbf{Reviewer 3:} \emph{ "with the configuration details" -> "with the final configuration details". Basically, be clear *which* configuration you're using.  You described several.}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "In the application domain, the standard procedure..." Be clear whether you're really talking about a specific application domain or a more general class of applications.}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ Figure 4 caption: First sentence is awkward/unclear.  Change "mistake" to "error" throughout.}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "However, you may have noted that" -> "Note that"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "Figure s4(a)" -> "Figures 4(a)"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ "modeling mistakes" -> "errors"}
+
+\textbf{Answer:} Fixed.
+
+\item \textbf{Reviewer 3:} \emph{ References Check the Weiss reference.  I checked Weiss's publications page, and the venue of publication looks wrong to me. }
+
+\textbf{Answer:} Fixed.
+
+\end{enumerate}
+
+
+\section{Answers to the comments of Reviewer 4} \label{sec:reviewer4}
+
+
+\begin{enumerate}
+
+\item \textbf{Reviewer 4:} \emph{Please summarize the paper's claims about impact achieved from a machine learning advance. Rather than machine learning advance, this paper is about human computing.  In particular, a Beat the Machine game is designed for humans to provide examples on which the ML algorithm doesn't know it was wrong.  This can be viewed as a new variant of previous game-based human computing efforts.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 4:} \emph{ Impact: This is a nice idea that, according to the paper, has been adopted by three companies and therefore has had real impacts.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 4:} \emph{ Novelty: This is not really ML but human computing designed to find weaknesses of a classifier.  I have not seen this particular idea before.}
+
+\textbf{Answer:} TODO
+
+\item \textbf{Reviewer 4:} \emph{ Problem description: The problem is to identify (through human help) regions of input space of a classifier such that the classifier confidently makes the wrong prediction.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 4:} \emph{ Machine learning: For the most part the paper does not involve machine learning.  However, when it describes machine learning (equation 1, definitions 1 and 2) it is at its weakest.  This part needs rewriting, see detailed comments below.}
+
+\textbf{Answer:} TODO
+
+\item \textbf{Reviewer 4:} \emph{ Results: The results are appropriate and demonstrates the utility of the "Beat the Machine" scheme.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 4:} \emph{ However, there is something unsatisfactory from an 'unknown unknown' perspective.  How does one quantify how much of unknown unknowns are the human beings able to reveal to the learner?  Are there unknown unknowns that not even human teachers know about?}
+
+\textbf{Answer:} TODO. [Panos: I am trying to understand if this is a tongue-in-cheek comment or a real one]
+
+\item \textbf{Reviewer 4:} \emph{ A related question that was not addressed is how the human teachers (the Turkers) learn what are the unknown unknowns with respect to the machine.  Did they just randomly guess in the beginning?  More importantly, did the humans adapt based on the feedback they received, in order to hone in on the most productive unknown unknown regions?}
+
+\textbf{Answer:} We intentionally give no guidance to the humans about the internals of the system. For generality, we want humans to probe the system in ways that each one considers the best, in order to tap into the diversity of thinking of each user. TODO. [Panos: Add some discussion about the second-level classifier that detects similarity with prior probes, discussion about multilinguality, etc]
+
+\item \textbf{Reviewer 4:} \emph{ Domain expert: The paper provides anecdotal evidence from industry users that the Beat the Machine scheme is useful.}
+
+\textbf{Answer:} -
+
+\item \textbf{Reviewer 4:} \emph{ Lessons: The most valuable lesson in terms of machine learning might be to suggest a possible venue for detecting model mismatch.  There is also obviously the practical impact.}
+
+\textbf{Answer:} TODO
+
+\item \textbf{Reviewer 4:} \emph{ The paper may give readers the impression that uncertainty-based sampling is a proper active learning strategy -- it is not.  See Dasgupta \& Langford's ICML'09 tutorial  \url{http://hunch.net/~active_learning/} I think the argument of unknown unknowns still holds, though.}
+
+\textbf{Answer:} TODO
+
+\item \textbf{Reviewer 4:} \emph{ Definition 1 is sloppy.  It might be cleaner in equation (1) to use $\hat{p_i}$ for the model-estimated posterior $p(y=i | x)$, and then $\hat{ExpCost}=\sum \hat{p_i} \hat{p_j} c_ij$.  (It's not clear why $\hat{MinCost}$ needs to be defined in equation (1))).  One then defines the true ExpCost using $p_i$ (the true posterior) and $\hat{p_j}$.  Furthermore, it is not clear what "high" means -- you either define it with rigor, or don't call it a definition.}
+
+\textbf{Answer:} We have revised the definition of expected and actual costs. Since the true posterior in our case is always a single class, the actual misclassification cost is trivially easy to compute. Regarding the term ``high'' we would still prefer to keep the current setting: the notion of known-unkowns and unknown-unkonwns is easier to understand when the we treat these regions as a continuum, instead of trying to impose artificial thresholds for defining the regions.
+
+\item \textbf{Reviewer 4:} \emph{ Same with definition 2.}
+
+\textbf{Answer:} See above.
+
+\item \textbf{Reviewer 4:} \emph{ p9 l13: typo}
+
+\textbf{Answer:} TODO
+
+\item \textbf{Reviewer 4:} \emph{ p10 l29: typo}
+
+\textbf{Answer:} TODO
+
+\item \textbf{Reviewer 4:} \emph{ p10 l42: typo}
+
+\textbf{Answer:} TODO
+
+
+
+\end{enumerate}
+
+
+
+
+\end{document}
