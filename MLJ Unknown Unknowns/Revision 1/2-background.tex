@@ -76,15 +76,15 @@ We \textit{can} invest in acquiring data to help us uncover inaccuracies.  For e
 % performance~\cite{forman2006quantifying}
 
 
-In practice, we often turn to particular heuristics to identify
+In practice, we often turn to particular techniques to identify
 cases that can help to find the errors of our model.  There has been a
 large amount of work studying ``active learning'' which attempts to
-find particularly informative examples~\cite{SettlesActiveLearning}.
+find particularly informative examples~\cite{SettlesActiveLearning,activelearningtutorial}.
 A large number of these strategies (uncertainty sampling, sampling
 near the separating hyperplane, query-by-committee, query-by-bagging,
-and others) essentially do the same thing: they choose the cases where
-the model is least certain, and invest in human labels for these.
-The strategy makes sense, as low-certainty areas is where we would expect to find
+and others) have one thing in common: they will \emph{not} look for cases where
+the model is certain or for cases that are not expected to improve learning performance.
+The strategy makes sense, as these are not areas is where we would expect to find
 errors.  Additionally, there has been a long history of understanding that
 ``near misses'' are the cases to use to best improve a model, both for
 machine learning~\cite{winston1970learning} and for human
